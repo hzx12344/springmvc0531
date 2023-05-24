@@ -63,8 +63,8 @@ public class DispatcherServlet extends HttpServlet {
         Object[] parameterValues = new Object[parameterType.length];
         Object obj = null;
         try {
-            String controllerClassName=controllerClass.getSimpleName();
-            controllerClassName=StringUtils.replaceChars(controllerClassName, controllerClassName.substring(0, 1),controllerClassName.substring(0, 1).toLowerCase());
+            String controllerClassName = controllerClass.getSimpleName();
+            controllerClassName = StringUtils.replaceChars(controllerClassName, controllerClassName.substring(0, 1), controllerClassName.substring(0, 1).toLowerCase());
             obj = BeanFactory.getInstance().getBean(controllerClassName);
             //obj = controllerClass.newInstance();
             for (int i = 0; i < parameterType.length; i++) {
@@ -80,6 +80,8 @@ public class DispatcherServlet extends HttpServlet {
                         parameterValues[i] = Integer.parseInt(request.getParameter(paramterList.get(i)));
                     } else if (parameterType[i].getTypeName().equals("float")) {
                         parameterValues[i] = Float.parseFloat(request.getParameter(paramterList.get(i)));
+                    } else if (parameterType[i].getTypeName().equals("long")) {
+                        parameterValues[i] = Long.parseLong(request.getParameter(paramterList.get(i)));
                     }
                 } else if (ClassUtils.isAssignable(parameterType[i], String.class)) {
                     parameterValues[i] = request.getParameter(paramterList.get(i));
@@ -92,7 +94,6 @@ public class DispatcherServlet extends HttpServlet {
                     Map<String, String[]> parameterMap = request.getParameterMap();
                     //beanutils会自动将map里的key与bean的属性名进行反射赋值
                     BeanUtils.populate(pojo, parameterMap);
-                    Users user=(Users)pojo;
                     parameterValues[i] = pojo;
                 }
             }

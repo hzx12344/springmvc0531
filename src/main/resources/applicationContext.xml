@@ -4,10 +4,16 @@
     <bean id="userController" class="cn.edu.guet.controller.UserController">
         <property name="userService" ref="userService"></property>
     </bean>
-
     <bean id="userService" class="cn.edu.guet.service.impl.UserServiceImpl">
         <property name="userDao" ref="userDao"></property>
     </bean>
-
     <bean id="userDao" class="cn.edu.guet.dao.impl.UserDaoImpl"></bean>
+
+    <bean id="studentController" class="cn.edu.guet.controller.StudentController">
+        <property name="studentService" ref="studentService"></property>
+    </bean>
+    <bean id="studentService" class="cn.edu.guet.service.impl.StudentServiceImpl">
+        <property name="studentDao" ref="studentDao"></property>
+    </bean>
+    <bean id="studentDao" class="cn.edu.guet.dao.impl.StudentDaoImpl"></bean>
 </beans>

@@ -12,4 +12,8 @@ import cn.edu.guet.common.ResponseData;
 public interface UserService {
 
     ResponseData saveUser(Users user);// 这是一个方法，报错的原因是：没有返回类型
+
+    ResponseData getUserById(Long id);
+
+    ResponseData getUserList();
 }

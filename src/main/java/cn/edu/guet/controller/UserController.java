@@ -30,4 +30,14 @@ public class UserController {
     public ResponseData saveUser(Users user) {
         return userService.saveUser(user);
     }
+
+    @RequestMapping("/getUserById")
+    public ResponseData getUserById(long id) {
+        return userService.getUserById(id);
+    }
+
+    @RequestMapping("/getUserList")
+    public ResponseData getUserList() {
+        return userService.getUserList();
+    }
 }

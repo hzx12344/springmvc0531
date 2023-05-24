@@ -34,4 +34,14 @@ public class UserServiceImpl implements UserService {
         }
         return ResponseData.fail("保存失败");
     }
+
+    @Override
+    public ResponseData getUserById(Long id) {
+        return ResponseData.ok(userDao.getObjectById(id));
+    }
+
+    @Override
+    public ResponseData getUserList() {
+        return ResponseData.ok(userDao.getObjects());
+    }
 }

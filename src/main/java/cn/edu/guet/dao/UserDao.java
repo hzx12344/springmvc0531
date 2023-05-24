@@ -8,4 +8,5 @@ import cn.edu.guet.bean.Users;
  * @Version 1.0
  */
 public interface UserDao extends BaseDao<Users>{
+
 }
