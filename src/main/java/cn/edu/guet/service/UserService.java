@@ -1,7 +1,7 @@
 package cn.edu.guet.service;
 
 
-import cn.edu.guet.bean.User;
+import cn.edu.guet.bean.Users;
 import cn.edu.guet.common.ResponseData;
 
 /**
@@ -11,5 +11,5 @@ import cn.edu.guet.common.ResponseData;
  */
 public interface UserService {
 
-    ResponseData saveUser(User user);// 这是一个方法，报错的原因是：没有返回类型
+    ResponseData saveUser(Users user);// 这是一个方法，报错的原因是：没有返回类型
 }

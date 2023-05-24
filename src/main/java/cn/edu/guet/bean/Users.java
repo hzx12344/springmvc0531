@@ -6,31 +6,31 @@ package cn.edu.guet.bean;
  * @Version 1.0
  */
 
-public class User {
-    private int userId;
+public class Users {
+    private Long id;
     private String username;
     private String address;
 
-    public User(int userId, String username, String address) {
-        this.userId = userId;
+    public Users(Long id, String username, String address) {
+        this.id = id;
         this.username = username;
         this.address = address;
     }
 
-    public User(String username, String address) {
+    public Users(String username, String address) {
         this.username = username;
         this.address = address;
     }
 
-    public User() {
+    public Users() {
     }
 
-    public int getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -52,7 +52,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "id=" + id +
                 ", username='" + username + '\'' +
                 ", address='" + address + '\'' +
                 '}';
