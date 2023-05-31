@@ -2,32 +2,39 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="SpringMVC:war" />
+      <artifact name="springmvc:war" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="77272ff9-72ae-472a-8b39-1585fecd1d9b" name="Default Changelist" comment="1、增加了BaseDao">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/StudentDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/StudentDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/StudentServiceImpl.java" afterDir="false" />
+    <list default="true" id="77272ff9-72ae-472a-8b39-1585fecd1d9b" name="Default Changelist" comment="1、SpringMVC框架的使用&#10;2、BaseDao的使用&#10;3、BaseDao增加了一个getObjects方法">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/PlanDesigninfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/PlanDesignDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/PlanDesignDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/BaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/BaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/bean/Users.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/common/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/common/ResponseData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/StudentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/StudentDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/UserDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/BaseDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/BaseDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/StudentDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao/impl/UserDaoImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mvc/DispatcherServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/mvc/DispatcherServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/StudentServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/edu/guet/service/impl/UserServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +81,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -89,11 +95,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/cn/edu/guet/dao" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -109,18 +119,18 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.56" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.56" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="17" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="SpringMVC:war">
+        <artifact name="springmvc:war">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="992c7fcb-569e-40a8-be2d-67f7a28af38f" />
+        <option name="BASE_DIRECTORY_NAME" value="feaae1a2-ed0a-473a-a6d8-cea0287e1938" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -128,7 +138,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="49989" />
+        <option name="DEBUG_PORT" value="58779" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -193,7 +203,8 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="SpringMVC:war" />
+          <artifact name="springmvc:war" />
+          <artifact name="SpringMVC12345:war" />
         </option>
       </method>
     </configuration>
@@ -231,7 +242,26 @@
       <workItem from="1684841640329" duration="3912000" />
       <workItem from="1684846630040" duration="2815000" />
       <workItem from="1684916913089" duration="363000" />
-      <workItem from="1684928040727" duration="6982000" />
+      <workItem from="1684928040727" duration="7259000" />
+      <workItem from="1684935637440" duration="110000" />
+      <workItem from="1685006042427" duration="3816000" />
+      <workItem from="1685015110529" duration="4566000" />
+      <workItem from="1685020241046" duration="1159000" />
+      <workItem from="1685086510006" duration="11423000" />
+      <workItem from="1685146893282" duration="76000" />
+      <workItem from="1685147844208" duration="5000" />
+      <workItem from="1685158572677" duration="368000" />
+      <workItem from="1685163926814" duration="3738000" />
+      <workItem from="1685173472116" duration="639000" />
+      <workItem from="1685190058356" duration="19000" />
+      <workItem from="1685362062124" duration="12692000" />
+      <workItem from="1685516012483" duration="2601000" />
+      <workItem from="1685519036407" duration="362000" />
+      <workItem from="1685519426738" duration="5213000" />
+      <workItem from="1685534431110" duration="2222000" />
+      <workItem from="1685537247873" duration="192000" />
+      <workItem from="1685537470660" duration="955000" />
+      <workItem from="1685538461846" duration="2332000" />
     </task>
     <task id="LOCAL-00001" summary="1、增加了BaseDao">
       <created>1684916958095</created>
@@ -240,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684916958095</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1、SpringMVC框架的使用&#10;2、BaseDao的使用&#10;3、BaseDao增加了一个getObjects方法">
+      <created>1684935312472</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684935312472</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +297,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1、增加了BaseDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、增加了BaseDao" />
+    <MESSAGE value="1、SpringMVC框架的使用&#10;2、BaseDao的使用&#10;3、BaseDao增加了一个getObjects方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、SpringMVC框架的使用&#10;2、BaseDao的使用&#10;3、BaseDao增加了一个getObjects方法" />
   </component>
 </project>

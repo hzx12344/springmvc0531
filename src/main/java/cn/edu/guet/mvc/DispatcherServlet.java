@@ -1,7 +1,8 @@
 package cn.edu.guet.mvc;
 
-import cn.edu.guet.bean.Users;
+import cn.edu.guet.bean.PlanDesigninfo;
 import cn.edu.guet.ioc.BeanFactory;
+import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.ClassUtils;
@@ -14,8 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
@@ -87,13 +87,23 @@ public class DispatcherServlet extends HttpServlet {
                     parameterValues[i] = request.getParameter(paramterList.get(i));
                 } else {
                     request.setCharacterEncoding("UTF-8");
+                    InputStreamReader isr=new InputStreamReader(request.getInputStream());
+                    BufferedReader br=new BufferedReader(isr);
+                    StringBuffer stringBuffer=new StringBuffer();
+                    String line=" ";
+                    while((line=br.readLine())!=null)
+                    {
+                        stringBuffer.append(line);
+                    }
+                    Gson gson=new Gson();
+
                     //Bean
-                    Object pojo = parameterType[i].newInstance();
+                    Object pojo =gson.fromJson(stringBuffer.toString(), PlanDesigninfo.class);
                     //得到请求里所有的参数：Map<参数名, value>
                     //获取表单里的数据
-                    Map<String, String[]> parameterMap = request.getParameterMap();
-                    //beanutils会自动将map里的key与bean的属性名进行反射赋值
-                    BeanUtils.populate(pojo, parameterMap);
+//                    Map<String, String[]> parameterMap = request.getParameterMap();
+//                    //beanutils会自动将map里的key与bean的属性名进行反射赋值
+//                    BeanUtils.populate(pojo, parameterMap);
                     parameterValues[i] = pojo;
                 }
             }
@@ -123,8 +133,6 @@ public class DispatcherServlet extends HttpServlet {
                 out.flush();
                 out.close();
             }
-        } catch (InstantiationException e) {
-            e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InvocationTargetException e) {

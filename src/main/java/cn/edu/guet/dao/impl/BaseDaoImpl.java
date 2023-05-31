@@ -1,6 +1,5 @@
 package cn.edu.guet.dao.impl;
 
-import cn.edu.guet.bean.Student;
 import cn.edu.guet.dao.BaseDao;
 import cn.edu.guet.util.DBConnection;
 import org.slf4j.Logger;
@@ -28,13 +27,14 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
     private Class<T> persistentClass;
 
     public BaseDaoImpl() {
-        conn = DBConnection.getConn();
+
         ParameterizedType type = (ParameterizedType) getClass().getGenericSuperclass();
         persistentClass = (Class<T>) type.getActualTypeArguments()[0];
     }
 
     @Override
     public int save(T t) {
+        conn = DBConnection.getConn();
         String sql = "INSERT INTO " + t.getClass().getSimpleName().toLowerCase() + " (";
         List<Method> list = this.matchPojoMethods(t, "get");
         Iterator<Method> iter = list.iterator();
@@ -113,6 +113,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
      */
     @Override
     public T getObjectById(Long id) {
+        conn = DBConnection.getConn();
         T t = null;
         String sql = "SELECT * FROM " + persistentClass.getSimpleName().toLowerCase() + " WHERE id=?";
         try {
@@ -132,7 +133,10 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
                         method.invoke(t, rs.getInt(method.getName().substring(3).toLowerCase()));
                     } else if (method.getParameterTypes()[0].getName().indexOf("Long") != -1) {
                         method.invoke(t, rs.getLong(method.getName().substring(3).toLowerCase()));
+                    }else if (method.getParameterTypes()[0].getName().indexOf("Timestamp") != -1) {
+                        method.invoke(t, rs.getTimestamp(method.getName().substring(3).toLowerCase()));
                     }
+
                 }
                 return t;
             }
@@ -152,6 +156,7 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
 
     @Override
     public List<T> getObjects() {
+        conn = DBConnection.getConn();
         T t = null;
         String sql = "SELECT * FROM " + persistentClass.getSimpleName().toLowerCase();
         List<T> objectList = new ArrayList<>();
@@ -171,6 +176,8 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
                         method.invoke(t, rs.getInt(method.getName().substring(3).toLowerCase()));
                     } else if (method.getParameterTypes()[0].getName().indexOf("Long") != -1) {
                         method.invoke(t, rs.getLong(method.getName().substring(3).toLowerCase()));
+                    }else if (method.getParameterTypes()[0].getName().indexOf("Timestamp") != -1) {
+                        method.invoke(t, rs.getTimestamp(method.getName().substring(3).toLowerCase()));
                     }
                 }
                 logger.info("对象列表：{}",objectList);

@@ -42,6 +42,7 @@ public class ResponseData<T> implements Serializable {
         this.data = data;
     }
 
+
     public ResponseData(String message) {
         this.message = message;
     }

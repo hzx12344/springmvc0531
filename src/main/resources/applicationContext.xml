@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<beans>
-    <bean id="userController" class="cn.edu.guet.controller.UserController">
-        <property name="userService" ref="userService"></property>
-    </bean>
-    <bean id="userService" class="cn.edu.guet.service.impl.UserServiceImpl">
-        <property name="userDao" ref="userDao"></property>
-    </bean>
-    <bean id="userDao" class="cn.edu.guet.dao.impl.UserDaoImpl"></bean>
 
-    <bean id="studentController" class="cn.edu.guet.controller.StudentController">
-        <property name="studentService" ref="studentService"></property>
+<beans>
+
+    <bean id="planDesignController" class="cn.edu.guet.controller.PlanDesignController">
+        <property name="planDesignService" ref="planDesignService"></property>
     </bean>
-    <bean id="studentService" class="cn.edu.guet.service.impl.StudentServiceImpl">
-        <property name="studentDao" ref="studentDao"></property>
+    <bean id="planDesignService" class="cn.edu.guet.service.impl.PlanDesignServiceImpl">
+        <property name="routeCableDao" ref="routeCableDao"></property>
+        <property name="plandesignDao" ref="planDesignDao"></property>
     </bean>
-    <bean id="studentDao" class="cn.edu.guet.dao.impl.StudentDaoImpl"></bean>
+    <bean id="routeCableDao" class="cn.edu.guet.dao.impl.RouteCableDaoImpl"></bean>
+    <bean id="planDesignDao" class="cn.edu.guet.dao.impl.PlanDesignDaoImpl"></bean>
+
 </beans>
